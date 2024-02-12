@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" style="--tg-viewport-height: 100vh; --tg-viewport-stable-height: 100vh;"><head>
+    <meta charset="UTF-8">
+    <title>JitStreamer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="MobileOptimized" content="176">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="apple-itunes-app" content="app-id=6471879502">
+    <meta name="telegram:channel" content="@swiftgram">
+    <style>
+        html {
+            margin: 0 auto;
+            max-width: 500px;
+        }
+
+        body {
+            font-family: var(--default-font);
+            --default-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+            font-weight: 400;
+            background-color: #f2f2f7;
+            margin: 0;
+            padding: 20px;
+
+
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .settings-container {
+            background-color: #fff;
+            /* background-color: #fff; */
+            border-radius: 10px;
+            /* Apply rounded corners to the container */
+            /* margin-bottom: 20px; */
+            overflow: hidden;
+            /* Ensures that child elements do not overflow the rounded corners */
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px 15px;
+            border-bottom: 1px solid #dbdbe1;
+            min-height: 31px;
+            margin-left: 2%; 
+            margin-right: 2%
+        }
+
+        .setting-item:last-of-type {
+            border-bottom: none;
+            /* Remove bottom border from last setting item */
+        }
+
+        .setting-title {
+            font-size: 17px;
+            color: #000;
+        }
+
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 51px;
+            height: 31px;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ddd;
+            transition: .4s;
+            border-radius: 31px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 27px;
+            width: 27px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+
+        input:checked+.slider {
+            background-color: #4cd964;
+        }
+
+        input:focus+.slider {
+            outline: none;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(20px);
+        }
+
+        .section-header {
+            padding: 20px 15px 5px 15px;
+            font-size: 13px;
+            background-color: #f2f2f7;
+            color: #8e8e93;
+        }
+
+        .setting-note {
+            padding: 5px 15px 20px 15px;
+            font-size: 13px;
+            color: #8e8e93;
+            background-color: #f2f2f7;
+        }
+      .setting-header {
+        padding: 10px 15px 5px 5px;
+            font-size: 28px;
+        font-weight: bold;
+            background-color: #f2f2f7;
+            color: #000;
+      }
+      .setting-inv {
+        position: relative;
+        color: #8e8e93;
+        
+            font-size: 17px;
+            
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="setting-header">
+      Jitter bug iOS 17.4
+  </div>
+    <div class="section-header">JITSTREAMER</div>
+    <div class="settings-container">
+        <div class="setting-item">
+            <div class="setting-title">Enable JitStreamer Attach</div>
+            <label class="toggle-switch">
+                <input type="checkbox" data-setting-name="disable_filtering" id="snt">
+                <span class="slider"></span>
+            </label>
+            
+        </div>
+      <div class="setting-item">
+        <div class="setting-title">
+          JitStreamer IP Adress
+        </div>
+        <div class="setting-inv">
+          69.69.0.1
+        </div>
+      </div>
+    </div>
+    <div class="setting-note">
+      this mf made by <a href="https://t.me/kryyaasoft">@kryyaasoft</a>, good evening!
+    </div>
+
+    <div class="section-header">APP</div>
+    <div class="settings-container">
+        <div class="setting-item">
+            <div class="setting-title">Version</div>
+            <div class="setting-inv">
+          1.0
+        </div>
+            
+        </div>
+      <div class="setting-item">
+        <div class="setting-title">
+          Build
+        </div>
+        <div class="setting-inv">
+          13
+        </div>
+      </div>
+      <div class="setting-item">
+        <div class="setting-title">
+          Supported iOS
+        </div>
+        <div class="setting-inv">
+          Any 17
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      var checkbox = document.getElementById("snt");
+      var faceid = document.getElementById("sntc"); 
+      
+      function save() {
+  if (checkbox.checked) {
+    var content = 'enabled'
+  } else {
+    var content = 'disabled'
+  }
+  if (faceid.checked) {
+    var face = 'enabled'
+  } else {
+    var face = 'disabled'
+  }
+        var ttd = confirm('Show sensitive content: ' + content + '\nLock face ID: ' + face +'\n\nContinue?')
+        if (ttd) {
+          alert('Setting applied.')
+        } }
+  </script>
+
+</body></html>
